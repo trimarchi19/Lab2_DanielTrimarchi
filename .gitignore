@@ -20,3 +20,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/Lab2_DanielTrimarchi/nbproject/private/
+/Lab2_DanielTrimarchi/build/
+/Lab2_DanielTrimarchi/dist/
