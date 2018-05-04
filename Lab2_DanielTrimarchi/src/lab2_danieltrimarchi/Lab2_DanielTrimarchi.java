@@ -90,7 +90,7 @@ public class Lab2_DanielTrimarchi {
     public static void Administracion() {
         System.out.println("------------------\n");
         System.out.println("1)Crear Examen:\n"
-                + "2)Revisar Examen:\n"
+                + "2)Ingresar Nota:\n"
                 + "3)Ver Notas:\n"
                 + "4)Modificar Notas:\n"
                 + "Escoja su Opcion");
@@ -102,6 +102,9 @@ public class Lab2_DanielTrimarchi {
                 break;
             case 2:
                 lea.nextLine();
+                for(int i=0;i<Cuentas.size();i++){
+                    System.out.println(Cuentas.get(i).Us);
+                }
                 System.out.println("Ingrese el usuario que desea meterle nota");
                 String us=lea.nextLine();
                 for(int i=0;i<Cuentas.size();i++){
