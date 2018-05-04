@@ -49,7 +49,27 @@ public class Lab2_DanielTrimarchi {
                         switch(opt2){
                             case 1:
                                 if(Pruebas.size()>0){
+                                    int puntos=0;
                                     System.out.println(Pruebas.get(0).materia);
+                                    System.out.println("Desea hacerlo?s/n");
+                                    char resp1=lea.next().charAt(0);
+                                    if(resp1=='s'||resp1=='S'){
+                                        System.out.println(Pruebas.get(0).materia);
+                                        System.out.println(Pruebas.get(0).Nota);
+                                        System.out.println(Pruebas.get(0).examen2);
+                                        int questions=(Pruebas.get(0).examen2.size());
+                                        lea.nextLine();
+                                        for(int j=0;j<questions;j++){
+                                            System.out.println(j+1+")Ingrese las respuestas");
+                                            String respues=lea.nextLine();
+                                            if(respues.equals(Pruebas.get(0).examen2.get(j))){
+                                                puntos+=1;
+                                            }
+                                        }
+                                        Pruebas.get(0).setNota(puntos);
+                                        System.out.println( Pruebas.get(0).Nota);
+                                    }
+                                    
                                 }else{
                                     System.out.println("No tiene examenes pendientes");
                                 }
