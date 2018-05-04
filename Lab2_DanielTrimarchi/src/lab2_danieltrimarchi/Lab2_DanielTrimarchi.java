@@ -62,12 +62,12 @@ public class Lab2_DanielTrimarchi {
                                         for(int j=0;j<questions;j++){
                                             System.out.println(j+1+")Ingrese las respuestas");
                                             String respues=lea.nextLine();
-                                            if(respues.equals(Pruebas.get(0).examen2.get(j))){
+                                            if(respues.equals(Pruebas.get(0).resp0.get(j))){
                                                 puntos+=1;
                                             }
                                         }
-                                        Pruebas.get(0).setNota(puntos);
-                                        System.out.println( Pruebas.get(0).Nota);
+                                        System.out.println("El usuario contesto bien"+puntos+"-preguntas");
+                                       
                                     }
                                     
                                 }else{
@@ -100,8 +100,21 @@ public class Lab2_DanielTrimarchi {
 
                 break;
             case 2:
+                System.out.println("Inrese el usuario que desea meterle nota");
+                String us=lea.nextLine();
+                for(int i=0;i<Cuentas.size();i++){
+                    if(us.equals(Cuentas.get(i))){
+                        System.out.println("Inserte la nota del estudiantes");
+                        int nota=lea.nextInt();
+                        Cuentas.get(i).setNota(nota);
+                    }
+                }
                 break;
             case 3:
+                for(int i=0;i<Cuentas.size();i++){
+                        System.out.println(i+1+")Estudiantes:"+Cuentas.get(i).Us+"--Nota:"+Cuentas.get(i).Nota);      
+                    }
+                System.out.println("-----------------------------");
                 break;
             case 4:
                 break;
@@ -131,10 +144,8 @@ public class Lab2_DanielTrimarchi {
                 while (st1.hasMoreTokens()) {
                     Object nextElement1 = st1.nextToken();
                     String Sa = nextElement1.toString();
-                    System.out.println(Sa+"+-+-+-");
                     if (Sa.equals(us)||Sa.equals(pass)) {
                         cont += 1;
-                        System.out.println(cont);
                     }
                             
                 }

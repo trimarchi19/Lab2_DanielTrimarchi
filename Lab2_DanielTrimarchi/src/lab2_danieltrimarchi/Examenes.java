@@ -20,7 +20,7 @@ public class Examenes {
   //ArrayList <String> preguntas=new ArrayList<>();  
   String Preguntas="";
   ArrayList resp0=new ArrayList();
-  ArrayList examen2=new ArrayList();
+  ArrayList<String> examen2=new ArrayList<>();
    ArrayList examen=new ArrayList();  
    String muestra="";
     public Examenes(){
