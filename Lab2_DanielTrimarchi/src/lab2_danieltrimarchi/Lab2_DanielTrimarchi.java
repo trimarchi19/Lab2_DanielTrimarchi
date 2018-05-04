@@ -57,6 +57,7 @@ public class Lab2_DanielTrimarchi {
                                         System.out.println(Pruebas.get(0).materia);
                                         System.out.println(Pruebas.get(0).Nota);
                                         System.out.println(Pruebas.get(0).examen2);
+                                        System.out.println("---------------------");
                                         int questions=(Pruebas.get(0).examen2.size());
                                         lea.nextLine();
                                         for(int j=0;j<questions;j++){
@@ -100,10 +101,11 @@ public class Lab2_DanielTrimarchi {
 
                 break;
             case 2:
-                System.out.println("Inrese el usuario que desea meterle nota");
+                lea.nextLine();
+                System.out.println("Ingrese el usuario que desea meterle nota");
                 String us=lea.nextLine();
                 for(int i=0;i<Cuentas.size();i++){
-                    if(us.equals(Cuentas.get(i))){
+                    if((Cuentas.get(i).Us).equals(us)){
                         System.out.println("Inserte la nota del estudiantes");
                         int nota=lea.nextInt();
                         Cuentas.get(i).setNota(nota);

@@ -13,6 +13,8 @@ import static lab2_danieltrimarchi.Lab2_DanielTrimarchi.lea;
  */
 public class Cuenta {
     String cuenta="";
+    String Us="";
+    int Nota;
     public Cuenta() {
         lea.nextLine();
         System.out.println("Ingrese usuario*Sin espacios*:");
@@ -20,9 +22,14 @@ public class Cuenta {
         System.out.println("Ingrese el password:");
         String pass = lea.nextLine();
         cuenta=us+"-"+pass;
+        Us=us;
     }
     @Override
     public String toString(){
         return cuenta;
+    }
+    public void setNota(int nota){
+     this.Nota+=nota;
+        
     }
 }
